@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>كوين شوب — تواصل عبر واتساب</title>
+  <meta name="description" content="كوين شوب — تواصل معنا عبر واتساب للحصول على أفضل العروض والمنتجات." />
+  <style>
+    :root{--bg:#f7f7fb;--card:#ffffff;--accent:#25D366;--text:#111827;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text); margin:0; padding:24px}
+    .container{max-width:920px;margin:24px auto;padding:28px;background:var(--card);border-radius:16px;box-shadow:0 6px 30px rgba(18,23,38,0.08)}
+    .header{display:flex;align-items:center;gap:16px}
+    .logo{width:72px;height:72px;background:linear-gradient(135deg,#fff5d9,#ffe8b6);display:flex;align-items:center;justify-content:center;border-radius:12px;font-weight:700;color:#111;font-size:20px}
+    h1{margin:0;font-size:24px}
+    p.lead{color:var(--muted);margin:8px 0 18px}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:center}
+    .card{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 4px 18px rgba(16,24,40,0.04)}
+    ul.features{padding-left:18px;margin:12px 0;color:var(--muted)}
+    .cta{display:flex;gap:12px;align-items:center}
+    .btn-wa{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    .btn-secondary{padding:10px 14px;border-radius:12px;border:1px solid #e6e9ef;background:transparent;color:var(--text);text-decoration:none;font-weight:600}
+    .phone{font-weight:700;color:#0b1220}
+    .image{width:100%;height:220px;background-image:url('https://images.unsplash.com/photo-1607083206968-1361a8a7ad59?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3');background-size:cover;background-position:center;border-radius:12px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}.image{height:160px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">🛍️</div>
+      <div>
+        <h1>أهلاً بك في كوين شوب</h1>
+        <p class="lead">أفضل مكان لشراء المنتجات بأسعار منافسة. تواصل معنا الآن عبر واتساب للحصول على عروض خاصة وخدمة عملاء سريعة.</p>
+      </div>
+    </div>
+
+    <div class="hero" style="margin-top:18px">
+      <div>
+        <div class="card">
+          <h2 style="margin:0 0 8px">عروضنا المميزة</h2>
+          <p style="margin:0 0 12px;color:var(--muted)">استمتع بأحدث العروض والتخفيضات. نحن نوفر منتجات أصلية بجودة عالية مع خدمة توصيل سريعة إلى باب منزلك.</p>
+
+          <ul class="features">
+            <li>أسعار خاصة وخصومات يومية</li>
+            <li>شحن سريع لجميع المناطق</li>
+            <li>خدمة عملاء متاحة على مدار الساعة</li>
+          </ul>
+
+          <div style="margin-top:12px" class="cta">
+            <a class="btn-wa" id="waBtn" href="https://wa.me/9720595289055?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20%D9%83%D9%88%D9%8A%D9%86%20%D8%B4%D9%88%D8%A8" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.478A11.87 11.87 0 0 0 12 0C5.373 0 .03 5.343.03 12c0 2.116.554 4.185 1.607 6.01L0 24l6.198-1.608A11.941 11.941 0 0 0 12 24c6.627 0 12-5.343 12-12 0-1.6-.325-3.125-.98-4.524z" fill="#fff"/></svg>
+              تواصل عبر واتساب
+            </a>
+            <a class="btn-secondary" href="#" onclick="copyLink(event)">نسخ رابط الصفحة</a>
+          </div>
+
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">رقم التواصل: <span class="phone" id="phoneText">+972 059-528-9055</span></p>
+        </div>
+
+        <footer>© 2025 كوين شوب — جميع الحقوق محفوظة</footer>
+      </div>
+
+      <div>
+        <div class="image" role="img" aria-label="صورة منتجات كوين شوب"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyLink(e){
+      e.preventDefault();
+      navigator.clipboard?.writeText(location.href).then(()=>{
+        alert('تم نسخ رابط الصفحة. يمكنك لصقه في إعلان سناب شات.');
+      }).catch(()=>{alert('فشل نسخ الرابط. انسخه يدوياً من شريط العنوان.');});
+    }
+  </script>
+</body>
+</html>
